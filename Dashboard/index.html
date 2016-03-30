@@ -1,0 +1,37 @@
+<html ng-app="dashboard">
+  <head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <div ng-controller="DataController as ctrl">
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Apps</div>
+          <div class="panel-body">
+          	<ul>
+          		<li ng-repeat="item in ctrl.getApps()">{{item}}</li>
+      		</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Chart</div>
+          <div class="panel-body">
+          	<canvas id="myChart" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+    <!--<script src="libs/Chart.min.js"></script>-->
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/dashboard.js"></script>
+	<script src="scripts/chart.min.js"></script>
+	<script src="scripts/myChart.js"></script>
+
+  </body>
+</html>
